@@ -1165,8 +1165,8 @@ pre {
   text-align: center;
 }
 .cid-qpJXc8X9pq {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: linear-gradient(45deg, #b40332, #630614);
 }
 @media (min-width: 992px) {
@@ -1204,6 +1204,9 @@ pre {
 }
 .cid-qpK4pbgjkj B {
   color: #767676;
+}
+.cid-qpK4pbgjkj .btn {
+  font-size: 18px;
 }
 .cid-qpJZBMsvBX {
   padding-top: 30px;
