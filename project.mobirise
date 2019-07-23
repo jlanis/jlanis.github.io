@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "last",
-    "currentPage": "index.html",
+    "currentPage": "connectiles.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -988,7 +988,7 @@
         }
       ]
     },
-    "page2.html": {
+    "connectiles.html": {
       "settings": {
         "meta_descr": "Site Creator Description",
         "title": "ConnecTiles",
