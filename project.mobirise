@@ -36,8 +36,8 @@
       ]
     },
     "versionFirst": "4.0.12",
-    "uniqCompNum": 9,
-    "versionPublish": "4.7.8",
+    "uniqCompNum": 11,
+    "versionPublish": "4.10.6",
     "path": "@PROJECT_PATH@",
     "screenshot": "screenshot.png",
     "siteFonts": []
@@ -574,10 +574,424 @@
         }
       ]
     },
-    "privacy.html": {
+    "page1.html": {
       "settings": {
         "meta_descr": "Our Privacy Policy",
         "title": "Privacy Policy",
+        "order": 2
+      },
+      "components": [
+        {
+          "_styles": {
+            ".navbar": {
+              "background": "@menuBgColor",
+              "transition": "none",
+              "min-height": "77px"
+            },
+            ".navbar-dropdown.bg-color.transparent.opened": {
+              "background": "@menuBgColor"
+            },
+            "a": {
+              "font-style": "normal"
+            },
+            ".nav-item": {
+              "& span": {
+                "padding-right": "0.4em",
+                "font-size": "1.6rem",
+                "line-height": "0.5em",
+                "vertical-align": "text-bottom",
+                "position": "relative",
+                "top": "-0.2em",
+                "text-decoration": "none"
+              },
+              "& a": {
+                "padding": "0.7rem 0 !important",
+                "margin": "0rem .65rem !important"
+              }
+            },
+            ".btn": {
+              "padding": "0.4rem 1.5rem",
+              ".mbr-iconfont": {
+                "font-size": "1.6rem"
+              },
+              "display": "inline-flex",
+              "align-items": "center"
+            },
+            ".menu-logo": {
+              "margin-right": "auto",
+              ".navbar-brand": {
+                "display": "flex",
+                "margin-left": "5rem",
+                "padding": "0",
+                "transition": "padding .2s",
+                "min-height": "3.8rem",
+                "align-items": "center",
+                ".navbar-caption-wrap": {
+                  "display": "-webkit-flex",
+                  "-webkit-align-items": "center",
+                  "align-items": "center",
+                  "word-break": "break-word",
+                  "min-width": "7rem",
+                  "margin": ".3rem 0",
+                  ".navbar-caption": {
+                    "line-height": "1.2rem !important",
+                    "padding-right": "2rem"
+                  }
+                },
+                ".navbar-logo": {
+                  "font-size": "4rem",
+                  "transition": "font-size 0.25s",
+                  "& img": {
+                    "display": "flex",
+                    "height": "3.8rem"
+                  },
+                  ".mbr-iconfont": {
+                    "transition": "font-size 0.25s"
+                  }
+                }
+              }
+            },
+            ".navbar-toggleable-sm .navbar-collapse": {
+              "justify-content": "flex-end",
+              "-webkit-justify-content": "flex-end",
+              "padding-right": "5rem",
+              "width": "auto",
+              ".navbar-nav": {
+                "flex-wrap": "wrap",
+                "-webkit-flex-wrap": "wrap",
+                "padding-left": "0",
+                ".nav-item": {
+                  "-webkit-align-self": "center",
+                  "align-self": "center"
+                }
+              },
+              ".navbar-buttons": {
+                "padding-left": "0",
+                "padding-bottom": "0"
+              }
+            },
+            ".dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                "display": "none",
+                "position": "absolute",
+                "min-width": "5rem",
+                "padding-top": "1.4rem",
+                "padding-bottom": "1.4rem",
+                "text-align": "left",
+                ".dropdown-item": {
+                  "width": "auto",
+                  "padding": "0.235em 1.5385em 0.235em 1.5385em !important",
+                  "&::after": {
+                    "right": "0.5rem"
+                  }
+                },
+                ".dropdown-submenu": {
+                  "margin": "0"
+                }
+              },
+              "&.open > .dropdown-menu": {
+                "display": "block"
+              }
+            },
+            ".navbar-toggleable-sm": {
+              "&.opened:after": {
+                "position": "absolute",
+                "width": "100vw",
+                "height": "100vh",
+                "content": "''",
+                "background-color": "rgba(0, 0, 0, 0.1)",
+                "left": "0",
+                "bottom": "0",
+                "transform": "translateY(100%)",
+                "-webkit-transform": "translateY(100%)",
+                "z-index": "1000"
+              }
+            },
+            ".navbar.navbar-short": {
+              "min-height": "60px",
+              "transition": "all .2s",
+              "& .navbar-toggler-right": {
+                "top": "20px"
+              },
+              "& .navbar-logo a": {
+                "font-size": "2.5rem !important",
+                "line-height": "2.5rem",
+                "transition": "font-size 0.25s",
+                "& .mbr-iconfont": {
+                  "font-size": "2.5rem !important"
+                },
+                "& img": {
+                  "height": "3rem"
+                }
+              },
+              "& .navbar-brand": {
+                "min-height": "3rem"
+              }
+            },
+            "button.navbar-toggler": {
+              "width": "31px",
+              "height": "18px",
+              "cursor": "pointer",
+              "transition": "all .2s",
+              "top": "1.5rem",
+              "right": "1rem",
+              "&:focus": {
+                "outline": "none"
+              },
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              }
+            },
+            ".collapsed": {
+              ".btn": {
+                "display": "flex"
+              },
+              ".navbar-collapse": {
+                "display": "none !important",
+                "padding-right": "0 !important",
+                "&.collapsing,&.show": {
+                  "display": "block !important",
+                  ".navbar-nav": {
+                    "display": "block",
+                    "text-align": "center",
+                    ".nav-item": {
+                      "clear": "both",
+                      "& when (@showButtons = false)": {
+                        "&:last-child": {
+                          "margin-bottom": "1rem"
+                        }
+                      }
+                    }
+                  },
+                  ".navbar-buttons": {
+                    "text-align": "center",
+                    "&:last-child": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              "button.navbar-toggler": {
+                "display": "block"
+              },
+              ".navbar-brand": {
+                "margin-left": "1rem !important",
+                "margin-top": ".5rem"
+              },
+              ".navbar-toggleable-sm": {
+                "flex-direction": "column",
+                "-webkit-flex-direction": "column"
+              },
+              ".dropdown": {
+                ".dropdown-menu": {
+                  "width": "100%",
+                  "text-align": "center",
+                  "position": "relative",
+                  "opacity": "0",
+                  "display": "block",
+                  "height": "0",
+                  "visibility": "hidden",
+                  "padding": "0",
+                  "transition-duration": ".5s",
+                  "transition-property": "opacity,padding,height"
+                },
+                "&.open > .dropdown-menu": {
+                  "position": "relative",
+                  "opacity": "1",
+                  "height": "auto",
+                  "padding": "1.4rem 0",
+                  "visibility": "visible"
+                },
+                ".dropdown-submenu": {
+                  "left": "0",
+                  "text-align": "center",
+                  "width": "100%"
+                },
+                ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]::after": {
+                  "margin-top": "0",
+                  "position": "inherit",
+                  "right": "0",
+                  "top": "50%",
+                  "display": "inline-block",
+                  "width": "0",
+                  "height": "0",
+                  "margin-left": ".3em",
+                  "vertical-align": "middle",
+                  "content": "\"\"",
+                  "border-top": ".30em solid",
+                  "border-right": ".30em solid transparent",
+                  "border-left": ".30em solid transparent"
+                }
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".btn": {
+                "display": "flex"
+              },
+              "button.navbar-toggler": {
+                "display": "block"
+              },
+              ".navbar-brand": {
+                "margin-left": "1rem !important",
+                "margin-top": ".5rem"
+              },
+              ".navbar-toggleable-sm": {
+                "flex-direction": "column",
+                "-webkit-flex-direction": "column"
+              },
+              ".navbar-collapse": {
+                "display": "none !important",
+                "padding-right": "0 !important",
+                "&.collapsing,&.show": {
+                  "display": "block !important",
+                  ".navbar-nav": {
+                    "display": "block",
+                    "text-align": "center",
+                    ".nav-item": {
+                      "clear": "both",
+                      "& when (@showButtons = false)": {
+                        "&:last-child": {
+                          "margin-bottom": "1rem"
+                        }
+                      }
+                    }
+                  },
+                  ".navbar-buttons": {
+                    "text-align": "center",
+                    "&:last-child": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              ".dropdown": {
+                ".dropdown-menu": {
+                  "width": "100%",
+                  "text-align": "center",
+                  "position": "relative",
+                  "opacity": "0",
+                  "display": "block",
+                  "height": "0",
+                  "visibility": "hidden",
+                  "padding": "0",
+                  "transition-duration": ".5s",
+                  "transition-property": "opacity,padding,height"
+                },
+                "&.open > .dropdown-menu": {
+                  "position": "relative",
+                  "opacity": "1",
+                  "height": "auto",
+                  "padding": "1.4rem 0",
+                  "visibility": "visible"
+                },
+                ".dropdown-submenu": {
+                  "left": "0",
+                  "text-align": "center",
+                  "width": "100%"
+                },
+                ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]::after": {
+                  "margin-top": "0",
+                  "position": "inherit",
+                  "right": "0",
+                  "top": "50%",
+                  "display": "inline-block",
+                  "width": "0",
+                  "height": "0",
+                  "margin-left": ".3em",
+                  "vertical-align": "middle",
+                  "content": "\"\"",
+                  "border-top": ".30em solid",
+                  "border-right": ".30em solid transparent",
+                  "border-left": ".30em solid transparent"
+                }
+              }
+            },
+            ".navbar-caption": {
+              "font-family": "'Roboto', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Roboto:400,300,700"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\">\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#333333\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <nav class=\"navbar navbar-dropdown align-items-center\" mbr-class=\"{'navbar-fixed-top': sticky,\n        'navbar-toggleable-sm': !collapsed,\n        'collapsed': collapsed,\n        'bg-color transparent': transparent}\">\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n        <div class=\"menu-logo\">\n            <div class=\"navbar-brand\">\n                <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                    \n                         <img src=\"@PROJECT_PATH@/assets/images/logo-transparent-background-1328x1243.png\" alt=\"Mobirise\" title>\n                    \n                </span>\n                <span mbr-if=\"showBrand\" mbr-buttons class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\">\n                    <a class=\"navbar-caption display-4 text-white\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-btn=\"true\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><span style=\"font-weight: normal;\"><br></span>Flying Pants Games<br><br></a>\n                </span>\n            </div>\n        </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-if=\"showItems\" mbr-menu class=\"navbar-nav nav-dropdown display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item dropdown\">\n                    <a class=\"nav-link link text-white dropdown-toggle\" href=\"page1.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" data-toggle=\"dropdown-submenu\">About</a><div class=\"dropdown-menu\"><a class=\"text-white dropdown-item\" href=\"page1.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Privacy Policy<br></a></div>\n                </li><li class=\"nav-item\"><a class=\"nav-link link text-white\" href=\"page1.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\"></a></li><li class=\"nav-item\">\n                    <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\"></a>\n                </li></ul>\n            <div mbr-if=\"showButtons\" mbr-buttons class=\"navbar-buttons mbr-section-btn\">\n                <a class=\"btn btn-sm btn-primary display-4\" href=\"https://mobirise.com\" data-app-btn=\"true\">\n                    <span class=\"mbri-save mbr-iconfont mbr-iconfont-btn \" data-app-selector=\".mbr-iconfont-btn\"></span>\n                    Try It Now!\n                </a>\n            </div>\n        </div>\n    </nav>\n</section>",
+          "_cid": "qpK0rmskCd",
+          "_anchor": "menu1-6",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p><b><br></b></p><p><b>Privacy Policy</b></p><p><b>Flying Pants Games respect the rights and our obligations regarding the privacy and personal information of our users (\"users\" or \"you\").  This Privacy Policy (the \"Policy\") describes the ways we collect, store, use, and manage the information, including personal information, that you provide or we collect in connection with any game provided on a mobile platform (collectively, the \"Service\").  Please note that the scope of this Policy is limited to information collected or received by us through your use of the Service. We are not responsible for the actions of third party people or companies, the content of their sites, the use of information you provide to them, or any products or services they may offer. Any link to those sites does not constitute our sponsorship of, or affiliation with, those people or companies. As used herein, the term \"use\" shall mean use, access, play, install, sign into, connect with, download, visit or browse our Sites or Services. By using the Service, you are expressing your agreement to this Policy and the processing of your data, including your personal information, in the manner provided in this Policy. You should not use our Services if you do not agree with this Policy.</b></p><div><b><br></b></div><div><b>HOW WE COLLECT AND USE INFORMATION</b></div><div><b><br></b></div><div><b>We collect information as described below.  Our primary goals in collecting and using information is to create your account, provide Services to you, improve our Service, contact you, conduct research and create reports for internal use. We store only a limited information about game stats in our in house servers.</b></div><div><b><br></b></div><div><b>IOS AND ANDROID PLATFORMS</b></div><div><b><br></b></div><div><b>We may collect and record certain information such as your unique device ID, hardware type, media access control (\"MAC\") address, the version of your operating system (\"OS\"), your device name, your email address (if you have connected to Facebook), and your location (based on your Internet Protocol (\"IP\") address).  This information is useful to us for troubleshooting and helps us understand usage trends.</b></div><div><b><br></b></div><div><b>CUSTOMER SERVICE</b></div><div><b><br></b></div><div><b>We may collect your email address when you contact our customer service group and we may use that email address to contact you about your gaming experience with any game and notify you about company news and promotions.</b></div><div><b><br></b></div><div><b>GAME DATA COLLECTION</b></div><div><b><br></b></div><div><b>We may collect data about all of your interactions with our games and with the other players inside the game via server log files.</b></div><div><b><br></b></div><div><b>COOKIES</b></div><div><b><br></b></div><div><b>Like many websites, we use server log files and automated data collection tools, such as cookies and web beacons (collectively, \"Data Collection Tools\") when you access our Service and/or use the Site. We tie the information gathered by these means to our customers’ personally identifiable information. These Data Collection Tools automatically track and collect certain technical information that your computer or device sends to our Site such as your IP addresses, browser types, browser language, referring and exit pages, URLs, platform type, the number of clicks, domain names, landing pages, clickstream data, pages viewed and the order of those pages, the amount of time spent on particular pages, game information and the date and time of activity on our Service, and other similar information. In some cases, we will associate this technical information with your ID number for our internal use. By using our Service, you consent to our use of cookies, web beacons and Data Collection Tools.</b></div><div><b><br></b></div><div><b>We use cookies for a variety of reasons, including to: analyze the usage of our Site and Service; provide a more personalized experience; manage advertising; allow you to more easily login to our Site and Service; help make your visit to our Site and/or use of our Service more efficient and more valuable by providing you with a customized experience and recognizing you when you return.</b></div><div><b><br></b></div><div><b>THIRD PARTY SERVICES</b></div><div><b><br></b></div><div><b>Our services may contain third party tracking tools from our service providers, examples of which include Google Analytics and GameAnalytics.  Such third parties may use cookies, APIs, and SDKs in our services to enable them to collect and analyze user information on our behalf.  The third parties may have access to information such as your device identifier, Media Access Control (\"MAC\") address, International Mobile Equipment Identity (\"IMEI\"), locale (specific location where a given language is spoken), geo-location information, and IP address.</b></div><div><b><br></b></div><div><b>HOW WE USE THE INFORMATION WE COLLECT</b></div><div><b><br></b></div><div><b>We may use the information we collect through your use of the Services for a variety of purposes, primarily related to providing and improving the quality of our Services. For example, we may use the information we collect in the following ways:</b></div><div><b><br></b></div><div><b>- Providing, administering, and facilitating your use of the Services, including the creation of game accounts;</b></div><div><b><br></b></div><div><b>- Managing your account preferences, establishing your Profile and Registration Information;</b></div><div><b><br></b></div><div><b>- Connecting you with your friends and/or contacts that are using the Services;</b></div><div><b><br></b></div><div><b>- Analyzing trends and user traffic to improve our Service;</b></div><div><b><br></b></div><div><b>- Notifying you of products, new products, services, features, promotions, enhancements, and updates, including in-game updates, loyalty and rewards programs, and updates to the Services and Privacy Policy;</b></div><div><b><br></b></div><div><b>- Marketing our products and/or services to you, including sending you offers, promotions information, newsletters, e-mail campaigns, and communications regarding new, improved or existing products, contests and/or sweepstakes;</b></div><div><b><br></b></div><div><b>- Resolving site problems; handling or responding to customer support questions and issues;</b></div><div><b><br></b></div><div><b>- Enabling user-to-user communication and interaction and soliciting input and feedback to improve user experience;</b></div><div><b><br></b></div><div><b>- Tracking purchases and usage information;</b></div><div><b><br></b></div><div><b>DISCLOSURE OF YOUR INFORMATION</b></div><div><b><br></b></div><div><b>We do not share your personal information except as approved by you or as described below:</b></div><div><b><br></b></div><div><b>- We may release your information as permitted by law or when we believe that release is appropriate to comply with the law; enforce or apply our rights; or protect the rights, property, or safety of us or our users, or others.  This includes exchanging information with other companies and organizations for fraud protection.</b></div><div><b><br></b></div><div><b>- If you opt-in or otherwise agree to have your information shared with a third party for marketing purposes, we will share you information with the third party (or third parties) in which case the third party’s use of your information is subject to the third party’s own privacy policy.</b></div><div><b><br></b></div><div><b>- We may share your information with third party companies that perform services on our behalf, including payment processing, order fulfillment, data analysis, marketing services, e-mail campaigns, hosting services, and customer service. While providing the services for us, these companies may access your personal information, and are required to use it solely as directed by us for the purpose of our requested service.</b></div><div><b><br></b></div><div><b>- In the event that we undergoe a business transition, such as a merger, acquisition, corporate divestiture or dissolution (including bankruptcy), or a sale of all or a portion of its assets, we may share, disclose or transfer all of your information, including personal information, to the successor organization in such transition.</b></div><div><b><br></b></div><div><b>HOW WE KEEP YOUR INFORMATION SECURE</b></div><div><b><br></b></div><div><b>We take commercially reasonable security measures to protect against unauthorized access to, or unauthorized alteration, disclosure or destruction of, sensitive data that you share and we collect and store. These security measures may include practices such as keeping your sensitive data on a secured server behind a firewall, transmitting sensitive information (such as a credit card number) entered on our site or mobile application using secure socket layer technology (SSL), internal reviews of our data collection practices and platforms, as well as physical security measures to guard against unauthorized access to systems where we store your information. Although we make good faith efforts to store the information collected on the Service in a secure operating environment that is not available to the public, we cannot guarantee the absolute security of that information during its transmission or its storage on our systems.  Further, while we attempt to ensure the integrity and security of our network and systems, we cannot guarantee that our security measures will prevent third-party \"hackers\" from illegally obtaining access to this information.  We do not warrant or represent that your information will be protected against, loss, misuse, or alteration by third parties.</b></div><div><b><br></b></div><div><b>YOUR CHOICES REGARDING YOUR PERSONAL DATA</b></div><div><b><br></b></div><div><b>We offer you choices regarding the collection, use, and sharing of your personal data and certain anonymous data.</b></div><div><b><br></b></div><div><b>- When you receive newsletters or promotional communications from us, you may indicate a preference to stop receiving further communications from us and you will have the opportunity to \"opt-out\" by following the unsubscribe instructions provided in the e-mail you receive.</b></div><div><b><br></b></div><div><b>- Despite your indicated e-mail preferences, we may send you service related communication, including notices of any updates to our Privacy Policy, terms of use, or license.</b></div><div><b><br></b></div><div><b>- Changes to Personal Data. You may request deletion of your Personal Data by us, but please note that we may be required to keep this information and not delete it (or to keep this information for a certain time, in which case we will comply with your deletion request only after we have fulfilled such requirements). When we delete any information, it will be deleted from the active database, but may remain in our archives.</b></div><div><b><br></b></div><div><b>CHILDREN UNDER AGE OF 13</b></div><div><b><br></b></div><div><b>We do not intentionally gather personal data from users who are under the age of 13. In the event that we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible.</b></div><div><b><br></b></div><div><b>CHANGES TO THE POLICY</b></div><div><b><br></b></div><div><b>We reserve the right to change this Policy at any time.  If we decide to change this Policy, we will post those changes on this page and update the date at the top of the page.  The changes will be effective when posted.  Please check this page on a regular basis so that you remain aware of what information we collect and how we use it.</b></div><div><b><br></b></div><div><b>CONTACT INFORMATION</b></div><div><b><br></b></div><div><b>If you have any questions about this Policy, please contact us via the contact form.</b></div><p></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qVLlAzSgtp",
+          "_anchor": "content1-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "meta_descr": "Site Creator Description",
+        "title": "ConnecTiles",
         "order": 1
       },
       "components": [
@@ -966,25 +1380,64 @@
           "_global": true,
           "_once": "menu",
           "_params": {},
-          "_anchor": "menu1-6"
+          "_anchor": "menu1-9"
         },
         {
+          "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
-            ".mbr-text, blockquote": {
-              "color": "#767676"
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".form-control, .form-control:focus": {
+              "background": "@inputBg",
+              "border": "1px solid @borderColor"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".form-container": {
+              "transition": "all .2s",
+              "border": "1px solid @borderColor",
+              "padding": "1rem",
+              "& when (@bgForm)": {
+                "background": "linear-gradient(@formColor1, @formColor2)",
+                "border": "none"
+              }
+            },
+            "textarea.form-control": {
+              "min-height": "188px"
+            },
+            ".input-group-btn": {
+              "justify-content": "center",
+              "-webkit-justify-content": "center"
+            },
+            ".content-container when not (@reverseContent)": {
+              "@media (min-width: 768px)": {
+                "padding-right": "5rem"
+              }
+            },
+            ".row when (@reverseContent)": {
+              "flex-direction": "row-reverse",
+              "-webkit-flex-direction": "row-reverse",
+              ".content-container": {
+                "@media (min-width: 768px)": {
+                  "padding-left": "5rem"
+                }
+              }
             }
           },
-          "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p><b><br></b></p><p><b>Privacy Policy</b></p><p><b>Flying Pants Games respect the rights and our obligations regarding the privacy and personal information of our users (\"users\" or \"you\").  This Privacy Policy (the \"Policy\") describes the ways we collect, store, use, and manage the information, including personal information, that you provide or we collect in connection with any game provided on a mobile platform (collectively, the \"Service\").  Please note that the scope of this Policy is limited to information collected or received by us through your use of the Service. We are not responsible for the actions of third party people or companies, the content of their sites, the use of information you provide to them, or any products or services they may offer. Any link to those sites does not constitute our sponsorship of, or affiliation with, those people or companies. As used herein, the term \"use\" shall mean use, access, play, install, sign into, connect with, download, visit or browse our Sites or Services. By using the Service, you are expressing your agreement to this Policy and the processing of your data, including your personal information, in the manner provided in this Policy. You should not use our Services if you do not agree with this Policy.</b></p><div><b><br></b></div><div><b>HOW WE COLLECT AND USE INFORMATION</b></div><div><b><br></b></div><div><b>We collect information as described below.  Our primary goals in collecting and using information is to create your account, provide Services to you, improve our Service, contact you, conduct research and create reports for internal use. We store only a limited information about game stats in our in house servers.</b></div><div><b><br></b></div><div><b>IOS AND ANDROID PLATFORMS</b></div><div><b><br></b></div><div><b>We may collect and record certain information such as your unique device ID, hardware type, media access control (\"MAC\") address, the version of your operating system (\"OS\"), your device name, your email address (if you have connected to Facebook), and your location (based on your Internet Protocol (\"IP\") address).  This information is useful to us for troubleshooting and helps us understand usage trends.</b></div><div><b><br></b></div><div><b>CUSTOMER SERVICE</b></div><div><b><br></b></div><div><b>We may collect your email address when you contact our customer service group and we may use that email address to contact you about your gaming experience with any game and notify you about company news and promotions.</b></div><div><b><br></b></div><div><b>GAME DATA COLLECTION</b></div><div><b><br></b></div><div><b>We may collect data about all of your interactions with our games and with the other players inside the game via server log files.</b></div><div><b><br></b></div><div><b>COOKIES</b></div><div><b><br></b></div><div><b>Like many websites, we use server log files and automated data collection tools, such as cookies and web beacons (collectively, \"Data Collection Tools\") when you access our Service and/or use the Site. We tie the information gathered by these means to our customers’ personally identifiable information. These Data Collection Tools automatically track and collect certain technical information that your computer or device sends to our Site such as your IP addresses, browser types, browser language, referring and exit pages, URLs, platform type, the number of clicks, domain names, landing pages, clickstream data, pages viewed and the order of those pages, the amount of time spent on particular pages, game information and the date and time of activity on our Service, and other similar information. In some cases, we will associate this technical information with your ID number for our internal use. By using our Service, you consent to our use of cookies, web beacons and Data Collection Tools.</b></div><div><b><br></b></div><div><b>We use cookies for a variety of reasons, including to: analyze the usage of our Site and Service; provide a more personalized experience; manage advertising; allow you to more easily login to our Site and Service; help make your visit to our Site and/or use of our Service more efficient and more valuable by providing you with a customized experience and recognizing you when you return.</b></div><div><b><br></b></div><div><b>THIRD PARTY SERVICES</b></div><div><b><br></b></div><div><b>Our services may contain third party tracking tools from our service providers, examples of which include Google Analytics and GameAnalytics.  Such third parties may use cookies, APIs, and SDKs in our services to enable them to collect and analyze user information on our behalf.  The third parties may have access to information such as your device identifier, Media Access Control (\"MAC\") address, International Mobile Equipment Identity (\"IMEI\"), locale (specific location where a given language is spoken), geo-location information, and IP address.</b></div><div><b><br></b></div><div><b>HOW WE USE THE INFORMATION WE COLLECT</b></div><div><b><br></b></div><div><b>We may use the information we collect through your use of the Services for a variety of purposes, primarily related to providing and improving the quality of our Services. For example, we may use the information we collect in the following ways:</b></div><div><b><br></b></div><div><b>- Providing, administering, and facilitating your use of the Services, including the creation of game accounts;</b></div><div><b><br></b></div><div><b>- Managing your account preferences, establishing your Profile and Registration Information;</b></div><div><b><br></b></div><div><b>- Connecting you with your friends and/or contacts that are using the Services;</b></div><div><b><br></b></div><div><b>- Analyzing trends and user traffic to improve our Service;</b></div><div><b><br></b></div><div><b>- Notifying you of products, new products, services, features, promotions, enhancements, and updates, including in-game updates, loyalty and rewards programs, and updates to the Services and Privacy Policy;</b></div><div><b><br></b></div><div><b>- Marketing our products and/or services to you, including sending you offers, promotions information, newsletters, e-mail campaigns, and communications regarding new, improved or existing products, contests and/or sweepstakes;</b></div><div><b><br></b></div><div><b>- Resolving site problems; handling or responding to customer support questions and issues;</b></div><div><b><br></b></div><div><b>- Enabling user-to-user communication and interaction and soliciting input and feedback to improve user experience;</b></div><div><b><br></b></div><div><b>- Tracking purchases and usage information;</b></div><div><b><br></b></div><div><b>DISCLOSURE OF YOUR INFORMATION</b></div><div><b><br></b></div><div><b>We do not share your personal information except as approved by you or as described below:</b></div><div><b><br></b></div><div><b>- We may release your information as permitted by law or when we believe that release is appropriate to comply with the law; enforce or apply our rights; or protect the rights, property, or safety of us or our users, or others.  This includes exchanging information with other companies and organizations for fraud protection.</b></div><div><b><br></b></div><div><b>- If you opt-in or otherwise agree to have your information shared with a third party for marketing purposes, we will share you information with the third party (or third parties) in which case the third party’s use of your information is subject to the third party’s own privacy policy.</b></div><div><b><br></b></div><div><b>- We may share your information with third party companies that perform services on our behalf, including payment processing, order fulfillment, data analysis, marketing services, e-mail campaigns, hosting services, and customer service. While providing the services for us, these companies may access your personal information, and are required to use it solely as directed by us for the purpose of our requested service.</b></div><div><b><br></b></div><div><b>- In the event that we undergoe a business transition, such as a merger, acquisition, corporate divestiture or dissolution (including bankruptcy), or a sale of all or a portion of its assets, we may share, disclose or transfer all of your information, including personal information, to the successor organization in such transition.</b></div><div><b><br></b></div><div><b>HOW WE KEEP YOUR INFORMATION SECURE</b></div><div><b><br></b></div><div><b>We take commercially reasonable security measures to protect against unauthorized access to, or unauthorized alteration, disclosure or destruction of, sensitive data that you share and we collect and store. These security measures may include practices such as keeping your sensitive data on a secured server behind a firewall, transmitting sensitive information (such as a credit card number) entered on our site or mobile application using secure socket layer technology (SSL), internal reviews of our data collection practices and platforms, as well as physical security measures to guard against unauthorized access to systems where we store your information. Although we make good faith efforts to store the information collected on the Service in a secure operating environment that is not available to the public, we cannot guarantee the absolute security of that information during its transmission or its storage on our systems.  Further, while we attempt to ensure the integrity and security of our network and systems, we cannot guarantee that our security measures will prevent third-party \"hackers\" from illegally obtaining access to this information.  We do not warrant or represent that your information will be protected against, loss, misuse, or alteration by third parties.</b></div><div><b><br></b></div><div><b>YOUR CHOICES REGARDING YOUR PERSONAL DATA</b></div><div><b><br></b></div><div><b>We offer you choices regarding the collection, use, and sharing of your personal data and certain anonymous data.</b></div><div><b><br></b></div><div><b>- When you receive newsletters or promotional communications from us, you may indicate a preference to stop receiving further communications from us and you will have the opportunity to \"opt-out\" by following the unsubscribe instructions provided in the e-mail you receive.</b></div><div><b><br></b></div><div><b>- Despite your indicated e-mail preferences, we may send you service related communication, including notices of any updates to our Privacy Policy, terms of use, or license.</b></div><div><b><br></b></div><div><b>- Changes to Personal Data. You may request deletion of your Personal Data by us, but please note that we may be required to keep this information and not delete it (or to keep this information for a certain time, in which case we will comply with your deletion request only after we have fulfilled such requirements). When we delete any information, it will be deleted from the active database, but may remain in our archives.</b></div><div><b><br></b></div><div><b>CHILDREN UNDER AGE OF 13</b></div><div><b><br></b></div><div><b>We do not intentionally gather personal data from users who are under the age of 13. In the event that we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible.</b></div><div><b><br></b></div><div><b>CHANGES TO THE POLICY</b></div><div><b><br></b></div><div><b>We reserve the right to change this Policy at any time.  If we decide to change this Policy, we will post those changes on this page and update the date at the top of the page.  The changes will be effective when posted.  Please check this page on a regular basis so that you remain aware of what information we collect and how we use it.</b></div><div><b><br></b></div><div><b>CONTACT INFORMATION</b></div><div><b><br></b></div><div><b>If you have any questions about this Policy, please contact us via the contact form.</b></div><p></p></div>\n        </div>\n    </div>\n</section>",
-          "_cid": "qVLlAzSgtp",
+          "_name": "header15",
+          "_customHTML": "<section class=\"header15\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"color\" title=\"Input Background\" name=\"inputBg\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Form Background\" name=\"bgForm\">\n        <input type=\"color\" title=\"Form Color 1\" name=\"formColor1\" value=\"#ff7f9f\" condition=\"bgForm\">\n        <input type=\"color\" title=\"Form Color 2\" name=\"formColor2\" value=\"#55b4d4\" condition=\"bgForm\">\n        <input type=\"checkbox\" title=\"Form On Right/Left\" name=\"reverseContent\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#073b4c\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-right\">\n        <div class=\"row\">\n            <div class=\"mbr-white col-lg-8 col-md-7 content-container\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    ConnecTiles Support</h1>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">For ConnecTiles support, please fill out and submit the form. We will be happy to respond to any questions!</p>\n            </div>\n            <div class=\"col-lg-4 col-md-5\">\n                <div class=\"form-container\">\n                    <div mbr-form class=\"media-container-column\">\n                        <!---Formbuilder Form--->\n                        <form action=\"jlanisdev@gmail.com\" name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                            <div class=\"row\">\n                                <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                                <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">\n                                </div>\n                            </div>\n                            <div class=\"dragArea row\">\n                                <div class=\"col-md-12 form-group \" data-for=\"name\">\n                                    <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control px-3\">\n                                </div>\n                                <div class=\"col-md-12 form-group \" data-for=\"email\">\n                                    <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control px-3\">\n                                </div>\n                                <div data-for=\"phone\" class=\"col-md-12 form-group \" hidden=\"hidden\">\n                                    <input type=\"tel\" name=\"phone\" placeholder=\"Phone\" data-form-field=\"Phone\" mbr-theme-style=\"display-7\" class=\"form-control px-3\" hidden=\"hidden\">\n                                </div>\n                                <div data-for=\"message\" class=\"col-md-12 form-group \">\n                                    <textarea name=\"message\" placeholder=\"Message\" data-form-field=\"Message\" mbr-theme-style=\"display-7\" class=\"form-control px-3\"></textarea>\n                                </div>\n                                <div class=\"col-md-12 input-group-btn \" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                                    <a type=\"submit\" class=\"btn btn-secondary btn-form\">SEND FORM</a>\n                                </div>\n                            </div>\n                        </form><!---Formbuilder Form--->\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rx4C5zCnPt",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {},
-          "_anchor": "content1-8"
+          "_anchor": "header15-a"
         }
       ]
     }
